@@ -164,30 +164,71 @@ body {
 The first step is easy....</p>
 		</div>
 	</div>
-<div role="form" class="wpcf7" id="wpcf7-f5-p460-o2" lang="en-US" dir="ltr">
-<div class="screen-reader-response"></div>
-<form action="https://www.deepphishing.com/contact-us/#wpcf7-f5-p460-o2" method="post" class="wpcf7-form" novalidate="novalidate">
+
+	<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+		<div class="wpb_wrapper">
+			<form novalidate="novalidate" id="contact-form">
 <div style="display: none;">
-<input type="hidden" name="_wpcf7" value="5" />
-<input type="hidden" name="_wpcf7_version" value="4.4.2" />
-<input type="hidden" name="_wpcf7_locale" value="en_US" />
-<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f5-p460-o2" />
-<input type="hidden" name="_wpnonce" value="4af97bb6bd" />
+<input name="_wpcf7" value="5" type="hidden">
+<input name="_wpcf7_version" value="4.4.2" type="hidden">
+<input name="_wpcf7_locale" value="en_US" type="hidden">
+<input name="_wpcf7_unit_tag" value="wpcf7-f5-p460-o2" type="hidden">
+<input name="_wpnonce" value="4af97bb6bd" type="hidden">
 </div>
-<p>Your Name (required)<br />
-    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </p>
-<p>Your Email (required)<br />
-    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </p>
-<p>Your Phone Number (required)<br />
-<span class="wpcf7-form-control-wrap phone-number"><input type="tel" name="phone-number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" /></span></p>
-<p>Company Name<br />
-<span class="wpcf7-form-control-wrap company-name"><input type="text" name="company-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></p>
-<p>Job Title (required)<br />
-<span class="wpcf7-form-control-wrap job-title"><input type="text" name="job-title" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span></p>
-<p>Your Message<br />
-    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </p>
-<p><input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" /></p>
-<div class="wpcf7-response-output wpcf7-display-none"></div></form></div></div></div></div><div class="wpb_column vc_column_container col-md-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"  style="height: 166px" ><span class="vc_empty_space_inner"></span></div>
+<p>Your Name (required)<br>
+    <span class="wpcf7-form-control-wrap your-name"><input id="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" type="text"></span> </p>
+<p>Your Email (required)<br>
+    <span class="wpcf7-form-control-wrap your-email"><input id="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" type="email"></span> </p>
+<p>Your Phone Number (required)<br>
+<span class="wpcf7-form-control-wrap phone-number"><input id="phone-number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" type="tel"></span></p>
+<p>Company Name<br>
+<span class="wpcf7-form-control-wrap company-name"><input id="company-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" type="text"></span></p>
+<p>Job Title (required)<br>
+<span class="wpcf7-form-control-wrap job-title"><input id="job-title" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" type="text"></span></p>
+<p>Your Message<br>
+    <span class="wpcf7-form-control-wrap your-message"><textarea id="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </p>
+<p><input value="Send" class="wpcf7-form-control wpcf7-submit" type="submit"><img style="visibility: hidden;" alt="Sending ..." src="https://www.deepphishing.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" class="ajax-loader"></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"
+                          integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+                          crossorigin="anonymous"></script>
+
+<script language="javascript">
+var URL = 'https://znoug2xm01.execute-api.eu-west-1.amazonaws.com/prod/contact_form_handler'
+ 
+$('#contact-form').submit(function (event) {
+  event.preventDefault()
+ 
+  var data = {
+    name: $('#your-name').val(),
+    email: $('#your-email').val(),
+    phone: $('#phone-number').val(),
+    company: $('#company-name').val(),
+    jobtitle: $('#job-title').val(),
+    message: $('#your-message').val(),
+    source: window.location.href,
+  }
+ 
+  $.ajax({
+    type: 'POST',
+    url: URL,
+    dataType: 'json',
+    contentType: 'application/json',
+    data: JSON.stringify(data),
+    success: function (data) {
+      // clear form and show a success message
+        alert(data);
+    },
+    error: function (data) {
+      // show an error message
+        console.log("error"+data);
+    }
+  })
+})
+</script>
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container col-md-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"  style="height: 166px" ><span class="vc_empty_space_inner"></span></div>
 
 	<div class="wpb_single_image wpb_content_element vc_align_left">
 		
